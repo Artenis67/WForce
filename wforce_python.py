@@ -7,7 +7,7 @@ driver = webdriver.Chrome()  # Assurez-vous d'avoir installé ChromeDriver et qu
 driver.get("https://svt-erlich.fr/seconde/enseignement-obligatoire/theme-2-la-terre-la-vie-et-lorganisation-du-vivant/")
 
 # Attendre que la page se charge
-time.sleep(10)
+time.sleep(20)
 
 # Générez tous les chiffres
 def generer_tous_les_chiffres():
