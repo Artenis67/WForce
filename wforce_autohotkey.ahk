@@ -1,9 +1,7 @@
-#Include <IE.ahk>
-
 generer_tous_les_chiffres() {
     chiffres := []
-    Loop 100000000 {
-        chiffre := SubStr("00000000" A_Index, -8)  ; Formatage avec 8 chiffres
+    Loop, 100000000 {
+        chiffre := SubStr("00000000" . A_Index, -8)  ; Formatage avec 8 chiffres
         chiffres.Push(chiffre)
     }
     return chiffres
@@ -31,7 +29,7 @@ MouseClick, left, %X%, %Y%
 Sleep, 1000
 
 ; Boucle pour envoyer chaque chiffre à un emplacement spécifique sur la page
-Loop % chiffres.MaxIndex() {
+Loop, % chiffres.MaxIndex() {
     chiffre := chiffres[A_Index]
     
     ; Copier le chiffre dans le presse-papiers
